@@ -1,4 +1,4 @@
 steps:
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '--tag=$LOCATION-docker.pkg.dev/$PROJECT_ID/spanner-autoscaler/poller', '.']
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['builds', 'submit', '--pack=env=GOOGLE_NODEJS_VERSION=18.x.x,image=$LOCATION-docker.pkg.dev/$PROJECT_ID/spanner-autoscaler/poller', '.']
 images: ['$LOCATION-docker.pkg.dev/$PROJECT_ID/spanner-autoscaler/poller']
