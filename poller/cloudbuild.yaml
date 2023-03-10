@@ -1,4 +1,3 @@
 steps:
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['builds', 'submit', '--pack=builder=gcr.io/buildpacks/builder:google-22,env=GOOGLE_NODEJS_VERSION=18.x.x,image=$LOCATION-docker.pkg.dev/$PROJECT_ID/spanner-autoscaler/poller', './poller']
-images: ['$LOCATION-docker.pkg.dev/$PROJECT_ID/spanner-autoscaler/poller']
+  args: ['builds', 'submit', '--pack=builder=gcr.io/buildpacks/builder:google-22,env=GOOGLE_NODEJS_VERSION=18.x.x,image=us-central1-docker.pkg.dev/bcs-ha-modelexec-np/autoscaler/poller', './poller']
